@@ -1,0 +1,265 @@
+/* Importation des polices depuis le dossier /fonts */
+@font-face {
+    font-family: 'Inter';
+    src: url("../fonts/Inter-VariableFont.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gasoek-One';
+    src: url('../fonts/GasoekOne-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Variables de couleurs */
+:root {
+    --primary: #27187E;
+    --background: #EDEBDA;
+    --text-black: #000000;
+    --text-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-black);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-family: 'Gasoek-One', sans-serif;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+header {
+    background-color: var(--primary);
+    padding: 1.5rem 3rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.navbar img {
+    height: 30px;
+    width: auto;
+}
+
+/* Conteneur principal */
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.section-right-title h2 {
+    text-align: right;
+    margin-bottom: 3rem;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.hero-nav {
+    flex: 1;
+}
+
+.hero-nav h2 {
+    margin-bottom: 2rem;
+}
+
+.hero-nav ul {
+    list-style: none;
+    font-weight: 700;
+}
+
+.hero-nav li {
+    margin-bottom: 1rem;
+}
+
+.hero-intro {
+    flex: 1.5;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    font-size: 0.95rem;
+}
+
+.btn-cv {
+    background-color: var(--primary);
+    color: var(--text-white);
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Timeline / Parcours */
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background-color: var(--text-black);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -0.5px;
+}
+
+.timeline-item {
+    padding: 1rem 3rem;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+.timeline-item h3 {
+    color: var(--text-black); /* En noir d'après l'image */
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+    font-size: 0.9rem;
+}
+
+/* Un peu plus sur moi */
+#a-propos h2 {
+    margin-bottom: 3rem;
+}
+
+.about-content {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Projets IT */
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.project-card {
+    flex: 1;
+    text-align: center;
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain; /* Ajuste l'image sans la rogner ni la générer */
+    background-color: var(--text-white);
+    margin-bottom: 1.5rem;
+}
+
+.project-card h3 {
+    color: var(--text-black);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.85rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    padding: 4rem 2rem;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--text-white);
+}
+
+.social-link h2 {
+    color: var(--text-white);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.social-link img {
+    width: 70px;
+    height: auto;
+}
