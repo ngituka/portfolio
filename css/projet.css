@@ -1,0 +1,150 @@
+/* --- Structure de la page projet --- */
+.project-page {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* En-tête : Titre à gauche, Logo carré à droite */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.project-title {
+    color: var(--primary);
+    font-size: 2.2rem;
+    line-height: 1.2;
+    flex: 1.5;
+}
+
+.project-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.project-logo img {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-color: var(--text-white);
+}
+
+/* Sommaire */
+.project-toc h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.project-toc ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.project-toc li a {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: opacity 0.2s ease;
+}
+
+.project-toc li a:hover {
+    opacity: 0.7;
+}
+
+/* Contenu textuel */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.content-block h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.content-block p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.content-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Section "Mes autres projets" */
+.other-projects h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.other-projects-grid {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: flex-start;
+}
+
+.other-projects-grid .project-card {
+    flex: 0 0 calc(50% - 1.25rem);
+    max-width: 320px;
+    text-align: center;
+}
+
+.other-projects-grid .project-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.other-projects-grid .project-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.other-projects-grid .project-card p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* --- Adaptations Mobile --- */
+@media (max-width: 768px) {
+    .project-header {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .project-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .project-logo img {
+        max-width: 200px;
+    }
+
+    .project-title {
+        font-size: 1.7rem;
+    }
+
+    .other-projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .other-projects-grid .project-card {
+        flex: 1 1 100%;
+        max-width: 280px;
+    }
+}
